@@ -71,7 +71,9 @@ function AccountCard({ account, selected, onToggle, index }: {
             <div className="flex items-center gap-3 mt-2 flex-wrap">
               {fin.interestRate !== undefined && (
                 <span className="text-xs text-gray-600 bg-gray-100 px-2 py-0.5 rounded-full">
-                  {fin.interestRate}% APR
+                  {fin.interestRateMin !== undefined
+                    ? `${fin.interestRateMin}% – ${fin.interestRate}% APR`
+                    : `${fin.interestRate}% APR`}
                 </span>
               )}
               {fin.minPayment !== undefined && (
