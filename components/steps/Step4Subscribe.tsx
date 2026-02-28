@@ -32,7 +32,7 @@ function TaskRow({ task }: { task: Task }) {
         )}
         {task.status === 'running' && (
           <motion.div
-            className="w-4 h-4 rounded-full border-2 border-indigo-300 border-t-indigo-600"
+            className="w-4 h-4 rounded-full border-2 border-[#7AB3E8] border-t-[#003087]"
             animate={{ rotate: 360 }}
             transition={{ duration: 0.8, repeat: Infinity, ease: 'linear' }}
           />
@@ -40,7 +40,7 @@ function TaskRow({ task }: { task: Task }) {
         {task.status === 'pending' && <div className="w-4 h-4 rounded-full border-2 border-gray-200" />}
         {task.status === 'error' && <div className="w-4 h-4 rounded-full bg-red-100 flex items-center justify-center text-red-600 text-xs">!</div>}
       </div>
-      <span className={`text-sm ${task.status === 'done' ? 'text-gray-700' : task.status === 'running' ? 'text-indigo-700 font-medium' : 'text-gray-400'}`}>
+      <span className={`text-sm ${task.status === 'done' ? 'text-gray-700' : task.status === 'running' ? 'text-[#003087] font-medium' : 'text-gray-400'}`}>
         {task.label}
       </span>
     </motion.div>
@@ -127,29 +127,29 @@ export default function Step4Subscribe() {
         <div className="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
           {!started ? (
             <div className="p-8 text-center">
-              <div className="w-16 h-16 rounded-full bg-indigo-50 flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 rounded-full bg-[#EEF4FB] flex items-center justify-center mx-auto mb-4">
                 <span className="text-3xl">🔔</span>
               </div>
               <h3 className="text-lg font-semibold text-gray-800 mb-2">Set Up Notifications</h3>
               <p className="text-sm text-gray-500 mb-2">
                 Register webhooks and subscribe{' '}
-                <span className="font-semibold text-indigo-700">{selectedAccountIds.length} account{selectedAccountIds.length !== 1 ? 's' : ''}</span>{' '}
+                <span className="font-semibold text-[#003087]">{selectedAccountIds.length} account{selectedAccountIds.length !== 1 ? 's' : ''}</span>{' '}
                 to receive real-time update events.
               </p>
               <div className="flex items-center justify-center gap-4 my-4 text-xs text-gray-500">
                 <div className="flex items-center gap-1.5">
-                  <div className="w-2 h-2 rounded-full bg-indigo-400" />
+                  <div className="w-2 h-2 rounded-full bg-[#4A90D9]" />
                   update.create
                 </div>
                 <div className="flex items-center gap-1.5">
-                  <div className="w-2 h-2 rounded-full bg-indigo-400" />
+                  <div className="w-2 h-2 rounded-full bg-[#4A90D9]" />
                   update.update
                 </div>
               </div>
               <button
                 onClick={handleSubscribe}
                 disabled={isLoading}
-                className="px-8 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-sm transition-all shadow-md shadow-indigo-200 active:scale-95"
+                className="px-8 py-3 rounded-xl bg-[#003087] hover:bg-[#002570] text-white font-semibold text-sm transition-all shadow-md shadow-blue-200 active:scale-95"
               >
                 Create Webhooks & Subscribe →
               </button>
@@ -183,12 +183,12 @@ export default function Step4Subscribe() {
                     {/* Webhook URLs */}
                     <div className="p-3 rounded-lg bg-gray-50 border border-gray-200 text-xs font-mono">
                       <p className="text-gray-500 mb-1.5 font-sans font-medium text-xs">Webhook endpoint</p>
-                      <p className="text-indigo-700 break-all">https://reference.example.app/webhook</p>
+                      <p className="text-[#003087] break-all">https://reference.example.app/webhook</p>
                     </div>
 
                     <button
                       onClick={() => setStep(4)}
-                      className="w-full py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-sm transition-all shadow-md shadow-indigo-200 active:scale-95"
+                      className="w-full py-3 rounded-xl bg-[#003087] hover:bg-[#002570] text-white font-semibold text-sm transition-all shadow-md shadow-blue-200 active:scale-95"
                     >
                       Create Payment Instruments →
                     </button>

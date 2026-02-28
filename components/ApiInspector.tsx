@@ -119,7 +119,7 @@ function LogEntry({ log, isLatest }: LogEntryProps) {
         isLatest
           ? isWebhook
             ? 'border-amber-500/40 bg-amber-500/5'
-            : 'border-indigo-500/40 bg-indigo-500/5'
+            : 'border-[#003087]/40 bg-[#003087]/5'
           : 'border-white/5 bg-white/[0.02]'
       }`}
     >
@@ -140,7 +140,7 @@ function LogEntry({ log, isLatest }: LogEntryProps) {
         {!isWebhook && (
           <button
             onClick={() => setShowCurl(!showCurl)}
-            className="text-xs text-gray-500 hover:text-indigo-400 transition-colors flex-shrink-0"
+            className="text-xs text-gray-500 hover:text-[#4A90D9] transition-colors flex-shrink-0"
           >
             {showCurl ? 'hide' : 'cURL'}
           </button>

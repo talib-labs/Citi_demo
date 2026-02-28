@@ -22,7 +22,7 @@ export default function DemoShell() {
       {/* Split screen */}
       <div className="flex-1 flex overflow-hidden">
         {/* Left — Lending Funnel (55%) */}
-        <div className="w-[55%] flex flex-col bg-gray-50 border-r border-gray-200 overflow-hidden">
+        <div className="w-[55%] flex flex-col bg-white border-r border-gray-200 overflow-hidden">
           <AnimatePresence mode="wait">
             <motion.div
               key={currentStep}

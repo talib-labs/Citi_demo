@@ -16,10 +16,10 @@ function CopyChip({ value }: { value: string }) {
         setCopied(true);
         setTimeout(() => setCopied(false), 2000);
       }}
-      className="flex items-center gap-1.5 px-2 py-1 rounded bg-gray-50 border border-gray-200 font-mono text-xs text-gray-700 hover:border-indigo-300 hover:bg-indigo-50 hover:text-indigo-700 transition-all group"
+      className="flex items-center gap-1.5 px-2 py-1 rounded bg-gray-50 border border-gray-200 font-mono text-xs text-gray-700 hover:border-[#7AB3E8] hover:bg-[#EEF4FB] hover:text-[#003087] transition-all group"
     >
       <span className="tracking-wider">{value}</span>
-      <span className="text-gray-400 group-hover:text-indigo-500 text-xs flex-shrink-0">
+      <span className="text-gray-400 group-hover:text-[#0058A0] text-xs flex-shrink-0">
         {copied ? '✓' : '⎘'}
       </span>
     </button>
@@ -57,7 +57,7 @@ function InstrumentCard({ accountId, accountName, instrument, index }: CardProps
           </motion.span>
         ) : (
           <motion.div
-            className="w-4 h-4 rounded-full border-2 border-indigo-300 border-t-indigo-600 flex-shrink-0"
+            className="w-4 h-4 rounded-full border-2 border-[#7AB3E8] border-t-[#003087] flex-shrink-0"
             animate={{ rotate: 360 }}
             transition={{ duration: 0.9, repeat: Infinity, ease: 'linear' }}
           />
@@ -80,8 +80,8 @@ function InstrumentCard({ accountId, accountName, instrument, index }: CardProps
                 <p className="text-xs text-gray-500 mb-1">Routing Number</p>
                 <CopyChip value={instrument.inbound_achwire_payment.routing_number} />
               </div>
-              <div className="mt-2 p-2 rounded-lg bg-indigo-50 border border-indigo-100 text-center">
-                <p className="text-xs text-indigo-600 font-medium">✓ Ready for ACH/Wire disbursement</p>
+              <div className="mt-2 p-2 rounded-lg bg-[#EEF4FB] border border-[#DCE9F8] text-center">
+                <p className="text-xs text-[#003087] font-medium">✓ Ready for ACH/Wire disbursement</p>
               </div>
             </div>
           </motion.div>
@@ -162,7 +162,7 @@ export default function Step5Instruments() {
           <button
             onClick={handleGenerate}
             disabled={isLoading || generating}
-            className="w-full py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold text-sm transition-all shadow-md shadow-indigo-200 active:scale-95"
+            className="w-full py-3 rounded-xl bg-[#003087] hover:bg-[#002570] disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold text-sm transition-all shadow-md shadow-blue-200 active:scale-95"
           >
             {generating ? (
               <span className="flex items-center justify-center gap-2">
@@ -186,7 +186,7 @@ export default function Step5Instruments() {
             </div>
             <button
               onClick={() => setStep(5)}
-              className="w-full py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-sm transition-all shadow-md shadow-indigo-200 active:scale-95"
+              className="w-full py-3 rounded-xl bg-[#003087] hover:bg-[#002570] text-white font-semibold text-sm transition-all shadow-md shadow-blue-200 active:scale-95"
             >
               Disburse Funds →
             </button>

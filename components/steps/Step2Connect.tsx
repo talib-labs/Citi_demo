@@ -40,7 +40,7 @@ function ScanningAnimation({ phase }: { phase: 'scanning' | 'done' }) {
             </motion.span>
           ) : (
             <motion.div
-              className="w-4 h-4 rounded-full border-2 border-indigo-300 border-t-indigo-600 flex-shrink-0"
+              className="w-4 h-4 rounded-full border-2 border-[#7AB3E8] border-t-[#003087] flex-shrink-0"
               animate={{ rotate: 360 }}
               transition={{ duration: 0.9, repeat: Infinity, ease: 'linear', delay: idx * 0.1 }}
             />
@@ -104,21 +104,21 @@ export default function Step2Connect() {
           <AnimatePresence mode="wait">
             {phase === 'idle' ? (
               <motion.div key="idle" className="p-8 text-center" exit={{ opacity: 0, y: -8 }}>
-                <div className="w-16 h-16 rounded-full bg-indigo-50 flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 rounded-full bg-[#EEF4FB] flex items-center justify-center mx-auto mb-4">
                   <span className="text-3xl">🔗</span>
                 </div>
                 <h3 className="text-lg font-semibold text-gray-800 mb-2">Ready to Connect</h3>
                 <p className="text-sm text-gray-500 mb-1">
                   Method will search for all liability accounts linked to:
                 </p>
-                <code className="text-xs bg-indigo-50 border border-indigo-100 px-2 py-1 rounded font-mono text-indigo-700">
+                <code className="text-xs bg-[#EEF4FB] border border-[#DCE9F8] px-2 py-1 rounded font-mono text-[#003087]">
                   {entityId}
                 </code>
                 <div className="mt-6">
                   <button
                     onClick={handleConnect}
                     disabled={isLoading}
-                    className="px-8 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-sm transition-all shadow-md shadow-indigo-200 active:scale-95"
+                    className="px-8 py-3 rounded-xl bg-[#003087] hover:bg-[#002570] text-white font-semibold text-sm transition-all shadow-md shadow-blue-200 active:scale-95"
                   >
                     Connect Accounts →
                   </button>
@@ -139,7 +139,7 @@ export default function Step2Connect() {
                     <p className="text-xs text-gray-400">Review the API response on the right, then continue.</p>
                     <button
                       onClick={() => setStep(2)}
-                      className="px-6 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-sm transition-all shadow-md shadow-indigo-200 active:scale-95"
+                      className="px-6 py-2.5 rounded-xl bg-[#003087] hover:bg-[#002570] text-white font-semibold text-sm transition-all shadow-md shadow-blue-200 active:scale-95"
                     >
                       Continue to Retrieve Accounts →
                     </button>

@@ -35,14 +35,14 @@ function AccountCard({ account, selected, onToggle, index }: {
       onClick={onToggle}
       className={`p-4 rounded-xl border-2 cursor-pointer transition-all ${
         selected
-          ? 'border-indigo-500 bg-indigo-50 shadow-md shadow-indigo-100'
+          ? 'border-[#003087] bg-[#EEF4FB] shadow-md shadow-blue-100'
           : 'border-gray-200 bg-white hover:border-gray-300 hover:shadow-sm'
       }`}
     >
       <div className="flex items-start gap-3">
         {/* Checkbox */}
         <div className={`w-5 h-5 rounded border-2 flex items-center justify-center flex-shrink-0 mt-0.5 transition-all ${
-          selected ? 'bg-indigo-600 border-indigo-600' : 'border-gray-300 bg-white'
+          selected ? 'bg-[#003087] border-[#003087]' : 'border-gray-300 bg-white'
         }`}>
           {selected && (
             <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -75,7 +75,7 @@ function AccountCard({ account, selected, onToggle, index }: {
                 </span>
               )}
               {fin.minPayment !== undefined && (
-                <span className="text-xs text-indigo-700 bg-indigo-50 border border-indigo-100 px-2 py-0.5 rounded-full">
+                <span className="text-xs text-[#003087] bg-[#EEF4FB] border border-[#DCE9F8] px-2 py-0.5 rounded-full">
                   Min: {fmt(fin.minPayment)}/mo
                 </span>
               )}
@@ -157,7 +157,7 @@ export default function Step3Accounts() {
             <motion.div
               animate={{ rotate: 360 }}
               transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
-              className="w-10 h-10 rounded-full border-2 border-indigo-200 border-t-indigo-600 mx-auto mb-3"
+              className="w-10 h-10 rounded-full border-2 border-[#B8D4F0] border-t-[#003087] mx-auto mb-3"
             />
             <p className="text-sm text-gray-500">Retrieving accounts…</p>
           </div>
@@ -174,7 +174,7 @@ export default function Step3Accounts() {
                       ? setSelectedAccountIds([])
                       : setSelectedAccountIds(accounts.map((a) => a.id))
                   }
-                  className="text-xs text-indigo-600 hover:text-indigo-800 font-medium"
+                  className="text-xs text-[#003087] hover:text-[#002570] font-medium"
                 >
                   {selectedAccountIds.length === accounts.length ? 'Deselect All' : 'Select All'}
                 </button>
@@ -201,7 +201,7 @@ export default function Step3Accounts() {
               <button
                 onClick={handleContinue}
                 disabled={selectedAccountIds.length === 0}
-                className="w-full py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 disabled:opacity-40 disabled:cursor-not-allowed text-white font-semibold text-sm transition-all shadow-md shadow-indigo-200 active:scale-95"
+                className="w-full py-3 rounded-xl bg-[#003087] hover:bg-[#002570] disabled:opacity-40 disabled:cursor-not-allowed text-white font-semibold text-sm transition-all shadow-md shadow-blue-200 active:scale-95"
               >
                 {selectedAccountIds.length === 0
                   ? 'Select accounts to continue'

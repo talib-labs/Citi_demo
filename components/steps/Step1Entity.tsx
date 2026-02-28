@@ -42,7 +42,7 @@ function Field({
         value={value}
         onChange={(e) => onChange(name, e.target.value)}
         placeholder={placeholder}
-        className={`w-full px-3 py-2 rounded-lg border border-gray-200 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-transparent bg-white transition-shadow ${mono ? 'font-mono tracking-widest' : ''}`}
+        className={`w-full px-3 py-2 rounded-lg border border-gray-200 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#003087] focus:border-transparent bg-white transition-shadow ${mono ? 'font-mono tracking-widest' : ''}`}
       />
     </div>
   );
@@ -87,7 +87,7 @@ export default function Step1Entity() {
         <p className="text-sm text-gray-500 mb-3">
           {entity.individual.first_name} {entity.individual.last_name}
         </p>
-        <div className="px-3 py-1.5 rounded-full bg-indigo-50 border border-indigo-200 text-xs font-mono text-indigo-700">
+        <div className="px-3 py-1.5 rounded-full bg-[#EEF4FB] border border-[#B8D4F0] text-xs font-mono text-[#003087]">
           {entity.id}
         </div>
         <p className="text-xs text-gray-400 mt-4 text-center max-w-xs">
@@ -95,7 +95,7 @@ export default function Step1Entity() {
         </p>
         <button
           onClick={() => setStep(1)}
-          className="mt-4 px-6 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-sm transition-all shadow-md shadow-indigo-200 active:scale-95"
+          className="mt-4 px-6 py-2.5 rounded-xl bg-[#003087] hover:bg-[#002570] text-white font-semibold text-sm transition-all shadow-md shadow-blue-200 active:scale-95"
         >
           Continue to Connect Liabilities →
         </button>
@@ -156,7 +156,7 @@ export default function Step1Entity() {
           <button
             onClick={handleSubmit}
             disabled={isLoading}
-            className="w-full py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold text-sm transition-all shadow-md shadow-indigo-200 active:scale-95"
+            className="w-full py-3 rounded-xl bg-[#003087] hover:bg-[#002570] disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold text-sm transition-all shadow-md shadow-blue-200 active:scale-95"
           >
             {isLoading ? (
               <span className="flex items-center justify-center gap-2">

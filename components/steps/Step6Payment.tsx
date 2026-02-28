@@ -35,7 +35,7 @@ function FlowArrow({ active }: { active: boolean }) {
           <div className="flex-1 h-0.5 bg-gray-200 relative overflow-hidden rounded-full">
             {active && (
               <motion.div
-                className="absolute inset-y-0 left-0 bg-indigo-400 rounded-full"
+                className="absolute inset-y-0 left-0 bg-[#4A90D9] rounded-full"
                 style={{ width: '35%' }}
                 animate={{ x: ['0%', '200%'] }}
                 transition={{ duration: 1.2, repeat: Infinity, ease: 'linear', delay: i * 0.3 }}
@@ -55,7 +55,7 @@ function FlowNode({ label, sub, icon, glowing }: { label: string; sub: string; i
   return (
     <motion.div
       className={`p-3 rounded-xl border-2 text-center min-w-[90px] transition-all ${
-        glowing ? 'border-indigo-400 bg-indigo-50 shadow-md shadow-indigo-100' : 'border-gray-200 bg-white'
+        glowing ? 'border-[#4A90D9] bg-[#EEF4FB] shadow-md shadow-blue-100' : 'border-gray-200 bg-white'
       }`}
       animate={glowing ? { scale: [1, 1.03, 1] } : {}}
       transition={{ duration: 1.5, repeat: Infinity }}
@@ -171,7 +171,7 @@ export default function Step6Payment() {
                 <div className="min-w-0">
                   <p className="text-sm font-medium text-gray-800 truncate">{destLabel}</p>
                   {destInstrument && (
-                    <p className="text-xs font-mono text-indigo-600">
+                    <p className="text-xs font-mono text-[#003087]">
                       RTN: {destInstrument.inbound_achwire_payment.routing_number}
                     </p>
                   )}
@@ -195,7 +195,7 @@ export default function Step6Payment() {
                   step="0.01"
                   value={amount}
                   onChange={(e) => setAmount(e.target.value)}
-                  className="w-full pl-7 pr-3 py-2 rounded-lg border border-gray-200 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+                  className="w-full pl-7 pr-3 py-2 rounded-lg border border-gray-200 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#003087]"
                   placeholder="50.00"
                 />
               </div>
@@ -205,7 +205,7 @@ export default function Step6Payment() {
             <button
               onClick={handleCreatePayment}
               disabled={creating || !destinationId}
-              className="w-full py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold text-sm transition-all shadow-md shadow-indigo-200 active:scale-95"
+              className="w-full py-3 rounded-xl bg-[#003087] hover:bg-[#002570] disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold text-sm transition-all shadow-md shadow-blue-200 active:scale-95"
             >
               {creating ? (
                 <span className="flex items-center justify-center gap-2">
