@@ -174,6 +174,8 @@ export function getAccountFinancials(account: Account) {
     interestRate:
       (d as { interest_rate_percentage?: number }).interest_rate_percentage ??
       (d as { interest_rate_percentage_max?: number }).interest_rate_percentage_max,
+    interestRateMin:
+      (d as { interest_rate_percentage_min?: number }).interest_rate_percentage_min,
   };
 }
 
